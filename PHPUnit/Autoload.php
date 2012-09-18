@@ -42,11 +42,6 @@
  * @since      File available since Release 3.5.0
  */
 
-require_once 'File/Iterator/Autoload.php';
-require_once 'PHP/CodeCoverage/Autoload.php';
-require_once 'PHP/Timer/Autoload.php';
-require_once 'PHPUnit/Framework/MockObject/Autoload.php';
-require_once 'Text/Template/Autoload.php';
 
 function phpunit_autoload($class = NULL)
 {
@@ -204,22 +199,3 @@ function phpunit_autoload($class = NULL)
 
 spl_autoload_register('phpunit_autoload');
 
-if (stream_resolve_include_path('PHP/Invoker/Autoload.php')) {
-    require_once 'PHP/Invoker/Autoload.php';
-}
-
-if (stream_resolve_include_path('PHPUnit/Extensions/Database/Autoload.php')) {
-    require_once 'PHPUnit/Extensions/Database/Autoload.php';
-}
-
-if (stream_resolve_include_path('PHPUnit/Extensions/SeleniumCommon/Autoload.php')) {
-    require_once 'PHPUnit/Extensions/SeleniumCommon/Autoload.php';
-}
-
-else if (stream_resolve_include_path('PHPUnit/Extensions/SeleniumTestCase/Autoload.php')) {
-    require_once 'PHPUnit/Extensions/SeleniumTestCase/Autoload.php';
-}
-
-if (stream_resolve_include_path('PHPUnit/Extensions/Story/Autoload.php')) {
-    require_once 'PHPUnit/Extensions/Story/Autoload.php';
-}
